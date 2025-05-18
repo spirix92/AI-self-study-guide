@@ -26,6 +26,7 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
+import androidx.compose.material3.ExperimentalMaterial3Api
 
 sealed class Screen(val route: String, val title: String) {
     object Splash : Screen("splash", "Загрузка")
@@ -80,6 +81,7 @@ fun AppNavigation() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TopBar(title: String, canNavigateBack: Boolean, onBack: () -> Unit) {
     TopAppBar(
