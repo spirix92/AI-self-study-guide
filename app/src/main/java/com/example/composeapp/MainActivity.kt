@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import com.example.designsystem.components.PrimaryButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.composeapp.ui.theme.ComposeAppTheme
@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun GreetingScreen() {
-    Text(text = "Привет, Compose!")
+    PrimaryButton(text = "Привет, Compose!") {}
 }
 
 @Preview(showBackground = true)
