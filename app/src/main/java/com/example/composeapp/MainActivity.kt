@@ -5,10 +5,10 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import com.example.designsystem.components.PrimaryButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.composeapp.ui.theme.ComposeAppTheme
+import com.example.composeapp.navigation.AppNavigation
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,22 +16,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposeAppTheme {
                 Surface(color = MaterialTheme.colorScheme.background) {
-                    GreetingScreen()
+                    AppNavigation()
                 }
             }
         }
     }
 }
 
-@Composable
-fun GreetingScreen() {
-    PrimaryButton(text = "Привет, Compose!") {}
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingScreenPreview() {
-    ComposeAppTheme {
-        GreetingScreen()
-    }
-}
