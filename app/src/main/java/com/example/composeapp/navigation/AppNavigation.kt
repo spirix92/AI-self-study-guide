@@ -28,6 +28,7 @@ import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.ExperimentalMaterial3Api
+import com.example.composeapp.ui.HomeScreen
 
 sealed class Screen(val route: String, val title: String) {
     object Splash : Screen("splash", "Загрузка")
@@ -80,7 +81,7 @@ fun AppNavigation() {
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(Screen.Splash.route) { SplashScreen(navController) }
-            composable(Screen.Home.route) { SimpleScreen(Screen.Home.title) }
+            composable(Screen.Home.route) { HomeScreen() }
             composable(Screen.Profile.route) { SimpleScreen(Screen.Profile.title) }
         }
     }
